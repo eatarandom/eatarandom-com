@@ -1,0 +1,50 @@
+/**
+ *	typography.scss
+ *	
+ *	Description:
+ *	Fonts and Icons.
+ *	
+ */
+body {
+	font-family: $type-sans;
+	font-size:60%;
+	color:$color-primary;
+	-webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,
+h4,h5,h6 {
+	@include transition(all 250ms ease-in-out);
+}
+
+h1 {
+	font-size:em(80);
+	font-weight:bold;
+	letter-spacing: -.05em;
+	text-indent:-.05em;
+}
+h2 {}
+h3 {
+	font-size:em(32);
+	line-height:1.25em; // 40/32
+	letter-spacing: -.025em;
+}
+h5 {
+	line-height:3em;
+}
+h6 {}
+
+a {
+	color:$color-body-color;
+	font-weight:bold;
+	text-decoration:none;
+	&:hover {
+		text-decoration:underline;
+	}
+}
+
+@include media($media-600) {
+	body {
+		font-size:100%;
+	}
+}

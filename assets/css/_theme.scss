@@ -1,0 +1,22 @@
+/**
+ *	theme.scss
+ *	
+ *	Description:
+ *	Page and section specific rules.
+ *	
+ */
+
+body {
+	color:$color-body-color;
+	background:$color-body-background;
+}
+
+.header {
+	position:absolute;
+	bottom:2.5%;
+	left:2.5%;
+	z-index:100;
+}
+canvas {
+	display:block;
+}

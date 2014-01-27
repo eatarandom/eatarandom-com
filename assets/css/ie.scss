@@ -1,0 +1,13 @@
+/**
+ *	ie.scss
+ *	
+ *	Description:
+ *	Import all files
+ *	
+ */
+
+@import "properties"; 		// variables/mixins/prototypes
+
+.last-child {
+	margin-right:0 !important;
+}
