@@ -11,28 +11,6 @@ define(function () {
     setupTracking();
     draw();
 
-
-    //
-    window.AudioContext = window.AudioContext ||
-        window.webkitAudioContext;
-
-    var ctx = new AudioContext();
-
-    navigator.getUserMedia({
-        audio: true
-    }, function (stream) {
-        var microphone = ctx.createMediaStreamSource(stream);
-        var filter = ctx.createBiquadFilter();
-
-        // microphone -> filter -> destination.
-        microphone.connect(filter);
-        filter.connect(context.destination);
-    }, function () {
-        console.log('error');
-    });
-    //
-
-
     function setupTracking() {
         for (var i = 0, l = links.length; i < l; i++) {
             links[i].addEventListener('click', function (e) {
